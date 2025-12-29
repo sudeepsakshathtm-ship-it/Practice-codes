@@ -1,0 +1,25 @@
+def poli(s):
+    x=ord("a")-ord("A")
+    upper=""
+    for y in s :
+        z=ord(y)
+        if z>=97 and z<=122:
+            z-=x
+            upper+=chr(z)
+        else :
+            upper+=y
+    j=len(upper)-1
+    i=0
+    while i<len(upper)//2:
+        t=upper[i]
+        k=upper[j]
+        if t!=k:
+            break
+        i+=1
+        j-=1
+    if i==j :
+        print(upper,"yes it is polydrama")
+    else :
+        print(upper,"it is not polidrama")
+
+poli("MaDAm")
